@@ -30,6 +30,13 @@ def fetch_site_text(url="https://staging4.bitcoiners.africa/"):
         print("Error fetching site content:", e)
         return ""
 
+
+@app.route('/', methods=['GET'])
+def home():
+    return "Am alive!!"
+
+
+
 @app.route('/api/chat', methods=['POST'])
 def chat():
     try:
